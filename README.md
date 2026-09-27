@@ -10,7 +10,8 @@
 | --- | --- | --- | --- |
 | 第 1 章 | 初识智能体与最小 Agent 循环 | ✅ 已完成 | [进入](chapter01/README.md) |
 | 第 2 章 | 智能体发展史与规则聊天机器人 | ✅ 理论完成 | [进入](chapter02/README.md) |
-| 第 3 章 | 大语言模型基础 | 🚧 学习中 | [进入](chapter03/README.md) |
+| 第 3 章 | 大语言模型基础 | ✅ 主线完成 | [进入](chapter03/README.md) |
+| 第 4 章 | 智能体经典范式构建 | 🚧 准备开始 | [进入](chapter04/README.md) |
 
 后续章节将随着学习进度持续更新。
 
@@ -20,6 +21,8 @@
 hello-agents-study/
 ├── chapter01/                   # Python 热身、工具调用、首个 Agent
 ├── chapter02/                   # 符号主义、ELIZA 与配套练习
+├── chapter03/                   # 语言模型、注意力、BPE 等小实验
+├── chapter04/                   # ReAct、Plan-and-Solve、Reflection 学习安排
 ├── LEARNING_PLAN.md             # 一个月学习计划
 ├── PROGRESS.md                  # 当前学习进度
 ├── ENVIRONMENT_COMPATIBILITY.md # 本地环境与版本说明
