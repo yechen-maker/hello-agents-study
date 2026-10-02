@@ -5,6 +5,7 @@ description = "Hands-on exercises for learning agent development with Hello-Agen
 readme = "README.md"
 requires-python = ">=3.11,<3.12"
 dependencies = [
+    "langgraph>=1.2.12",
     "openai>=3.8.0",
     "python-dotenv>=1.2.3",
     "requests>=2.34.2",
