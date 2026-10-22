@@ -14,7 +14,7 @@
 | 第 4 章 | 智能体经典范式构建 | ✅ 主线完成 | [进入](chapter04/README.md) |
 | 第 5 章 | 基于低代码平台的智能体搭建 | ⏭️ 选择性跳过实操 | [说明](chapter05/README.md) |
 | 第 6 章 | 框架开发实践 | ✅ 主线完成 | [进入](chapter06/README.md) |
-| 第 7 章 | 构建你的智能体框架 | 🚧 准备开始 | [进入](chapter07/README.md) |
+| 第 7 章 | 构建你的智能体框架 | ✅ 已完成 | [进入](chapter07/README.md) |
 
 后续章节将随着学习进度持续更新。
 
@@ -28,7 +28,7 @@ hello-agents-study/
 ├── chapter04/                   # ReAct、Plan-and-Solve、Reflection 实验
 ├── chapter05/                   # 低代码平台阅读与实操安排
 ├── chapter06/                   # 框架开发实践的阅读入口与暂停点
-├── chapter07/                   # 自建框架的分段学习安排
+├── chapter07/                   # 消息、配置、Agent 基类与工具注册表练习
 ├── LEARNING_PLAN.md             # 一个月学习计划
 ├── PROGRESS.md                  # 当前学习进度
 ├── ENVIRONMENT_COMPATIBILITY.md # 本地环境与版本说明
