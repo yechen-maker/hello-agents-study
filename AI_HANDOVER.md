@@ -65,8 +65,12 @@
 
 ---
 
-## 五、仓库与分支管理约定
+## 五、仓库与远程配置（双端已同步）
 
 - **主分支**：`main`
+- **远程仓库**：
+  - **Gitee（国内首选）**：`https://gitee.com/king-li-yanchen/hello-agents-study.git`（remote 名称：`gitee`）
+  - **GitHub**：`https://github.com/yechen-maker/hello-agents-study.git`（remote 名称：`origin`）
+  - 国内网络环境下优先使用 `git push gitee main` 和 `git pull gitee main`。
 - **学习进度记录**：每章开始和结束均维护根目录的 `PROGRESS.md` 和 `README.md`，并在对应的 `chapterXX/README.md` 记录详细暂停点与验收标准。
 - **Git 提交原则**：除非学习者明确要求，平时不擅自自动 commit 或 push；当章节全部通过、学习者要求提交时，先 `git diff --cached --stat` 核对无误后再提交。
