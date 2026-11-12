@@ -66,13 +66,17 @@
 
 ---
 
-## 五、仓库与远程配置（双端已同步）
+## 五、仓库与远程配置（双端分工）
 
 - **主分支**：`main`
-- **远程仓库**：
-  - **Gitee（国内首选）**：`https://gitee.com/king-li-yanchen/hello-agents-study.git`（remote 名称：`gitee`）
-  - **GitHub**：`https://github.com/yechen-maker/hello-agents-study.git`（remote 名称：`origin`）
-  - 国内网络环境下优先使用 `git push gitee main` 和 `git pull gitee main`。
+- **两个远程仓库**：
+  - **Gitee（国内唯一通道，remote: `gitee`）**：`https://gitee.com/king-li-yanchen/hello-agents-study.git`
+  - **GitHub（海外与全量备份，remote: `origin`）**：`https://github.com/yechen-maker/hello-agents-study.git`
+- **两名 AI 的职责分工（⚠️ 极其明确）**：
+  - **国内 AI（周中）**：受限于网络环境，**只读写 Gitee**（`git pull gitee main` / `git push gitee main`），完全无需访问 GitHub；
+  - **Antigravity AI（周末）**：网络通畅，**负责双端同步维护枢纽**：
+    - 每次接班时：先从 `gitee` 拉取国内 AI 的最新成果（`git pull gitee main`）；
+    - 每次交班/提交时：**必须同时推送到 Gitee 和 GitHub 两个远端**（`git push gitee main && git push origin main`），确保 GitHub 始终与 Gitee 保持完全一致！
 - **学习进度记录**：每章开始和结束均维护根目录的 `PROGRESS.md` 和 `README.md`，并在对应的 `chapterXX/README.md` 记录详细暂停点与验收标准。
 - **Git 提交原则**：除非学习者明确要求，平时不擅自自动 commit 或 push；当章节全部通过、学习者要求提交时，先 `git diff --cached --stat` 核对无误后再提交。
 
@@ -82,21 +86,29 @@
 
 为了保证两位 AI 能够互相无缝衔接，请在交接时严格遵守以下规范：
 
-### 1. 交班规范（当次辅导结束时）
-- **更新进度**：更新本文件「四、接棒当前正在进行的事项」中的**最新通过率、当前卡点与具体下一步动作**；
-- **同步文档**：更新 `PROGRESS.md` 和对应 `chapterXX/README.md` 的暂停点勾选；
-- **推送远端**：将最新代码推送到 Gitee（国内环境）和 GitHub（若网络可用）：
-  ```bash
-  git add .
-  git commit -m "docs: handover - update chapter XX progress"
-  git push gitee main
-  # 若网络允许可同时 push origin main
-  ```
+### 1. 国内 AI（周中）交接操作
+- **交班时**：
+  1. 更新本文件「四、接棒当前正在进行的事项」（写明最新完成点、测试通过数、卡点、下一个 TODO）；
+  2. 更新 `PROGRESS.md` 与章节 README；
+  3. 执行：`git add . && git commit -m "docs: handover - update chapter XX progress" && git push gitee main`。
+- **接班时**：
+  1. 执行：`git pull gitee main`；
+  2. 读本文件「四、接棒当前正在进行的事项」；
+  3. 按照小白教学风格继续辅导。
 
-### 2. 接班规范（下次辅导开始时）
-- **同步远端**：接手第一步先拉取最新代码（防止对方有最新提交未同步）：
-  ```bash
-  git pull gitee main
-  ```
+### 2. Antigravity AI（周末）交接操作（兼双端同步桥梁）
+- **接班时**：
+  1. **第一步必须先拉取 Gitee**（因为国内 AI 只推了 Gitee）：`git pull gitee main`；
+  2. 将拉取到的最新提交顺手同步给 GitHub：`git push origin main`；
+  3. 读本文件「四、接棒当前正在进行的事项」，向学习者复述进度并继续辅导。
+- **交班时**：
+  1. 更新本文件「四、接棒当前正在进行的事项」与相关文档；
+  2. **同时推送到两端**：
+     ```bash
+     git add .
+     git commit -m "docs: handover - update chapter XX progress"
+     git push gitee main
+     git push origin main
+     ```
 - **阅读交接板**：仔细阅读本文件「四、接棒当前正在进行的事项」，确认上一次对话停在哪一行代码或哪一个小节；
 - **无缝开场**：向学习者简述上一次停滞的位置，延续小白教学风格（耐心、比喻、引导手写、不贴整段代码），继续下一阶段辅导。
