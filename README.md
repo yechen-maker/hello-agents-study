@@ -16,6 +16,7 @@
 | 第 6 章 | 框架开发实践 | ✅ 主线完成 | [进入](chapter06/README.md) |
 | 第 7 章 | 构建你的智能体框架 | ✅ 已完成 | [进入](chapter07/README.md) |
 | 第 8 章 | 记忆与检索 | ✅ 已完成 | [进入](chapter08/README.md) |
+| 第 9 章 | 上下文工程 | 🚧 学习中 | [进入](chapter09/README.md) |
 
 后续章节将随着学习进度持续更新。
 
@@ -31,6 +32,7 @@ hello-agents-study/
 ├── chapter06/                   # 框架开发实践的阅读入口与暂停点
 ├── chapter07/                   # 消息、配置、Agent 基类与工具注册表练习
 ├── chapter08/                   # 记忆与 RAG 的分段学习安排
+├── chapter09/                   # 上下文工程与滑动预算裁剪
 ├── LEARNING_PLAN.md             # 一个月学习计划
 ├── PROGRESS.md                  # 当前学习进度
 ├── ENVIRONMENT_COMPATIBILITY.md # 本地环境与版本说明
